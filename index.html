@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeterAI Trainer Pro - PWA Edition</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-900 text-slate-100 min-h-screen p-6">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-cyan-400 mb-2">MeterAI Trainer Pro</h1>
+            <p class="text-slate-400">ระบบเทรน AI และอ่านมิเตอร์ประปา (มาตรฐาน 4 หลักดำ + 3 หลักแดง)</p>
+        </header>
+
+        <main class="bg-slate-800 p-6 rounded-2xl shadow-xl border border-slate-700 space-y-6">
+            <!-- ส่วนอัปโหลดรูป -->
+            <div class="border-2 border-dashed border-slate-600 rounded-xl p-8 text-center hover:border-cyan-400 transition cursor-pointer" id="drop-zone">
+                <input type="file" id="meter-image" accept="image/*" class="hidden">
+                <p class="text-slate-300 font-medium">ลากไฟล์รูปมิเตอร์มาวางที่นี่ หรือ <span class="text-cyan-400 underline">คลิกเพื่อเลือกรูป</span></p>
+            </div>
+
+            <!-- แสดงตัวอย่างรูป -->
+            <div id="preview-container" class="hidden text-center space-y-4">
+                <img id="image-preview" class="max-h-64 mx-auto rounded-lg border border-slate-700 shadow-md" alt="Meter Preview">
+                <button id="predict-btn" class="bg-cyan-500 hover:bg-cyan-600 text-slate-950 font-bold px-6 py-2 rounded-lg transition shadow-lg">
+                    ให้ AI ทำนายค่ามิเตอร์
+                </button>
+            </div>
+
+            <!-- ผลลัพธ์ -->
+            <div id="result-box" class="hidden bg-slate-900 p-4 rounded-xl border border-slate-700">
+                <h3 class="text-lg font-semibold text-emerald-400 mb-2">ผลการอ่านค่า:</h3>
+                <p id="result-text" class="text-2xl font-mono text-white"></p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

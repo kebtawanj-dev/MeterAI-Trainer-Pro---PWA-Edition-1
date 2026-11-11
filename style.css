@@ -1,0 +1,4 @@
+/* Custom styles ถ้าต้องการเพิ่มเติมจาก Tailwind */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
